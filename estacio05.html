@@ -1,0 +1,43 @@
+<!Doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" name="Viewport" content="witdh=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+  <script type:"text/javascript">
+    var cores = [//amarelo verde azul branco prefo
+      {id:1, nome:'Amarelo'},
+      {id:2, nome:'Verde'},
+      {id:3, nome:'Azul'},
+      {id:4, nome:'Branco'},
+      {id:5, nome:'Preto'},
+      ];
+      //Caso você queira extrair apenas os nomes do array "cores"
+      //Exemplo 1: Utilizando um laço foreach
+      //criando um novo array para receber os nomes
+      var nomesCores=[]
+      //percorrendo o array corres e atribuindo ao novo array os nomes
+      //cores.forEach((cor, indice, lista)=>{
+        //nomesCores.push(cor.nome)
+        //console.log(cor.id);
+        //console.log(cor);
+        //console.log(cor.nome);
+        //console.log(indice,cor,lista)
+      //})
+      cores.forEach(function (cor){
+        nomesCores.push(cor.nome);
+      });
+      console.log(nomesCores)
+      //Imprimirá ["Amarelo,"Verde","Azul","Branco","Preto"]
+      //Exemplo 2: Utilizando arrow function
+      const coresNomes=cores.map(cor=>cor.nome);
+      console.log(coresNomes);
+      //Imprimirá ["Amarelo,"Verde","Azul","Branco","Preto"]
+      
+  </script>
+  
+</body>
+</html>
+
+
