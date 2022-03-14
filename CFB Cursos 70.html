@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+
+		
+	</style>
+	<script>
+
+		var vcorf, vcort, venome;
+
+		if(typeof(Storage)!="undefine"){
+			if(localStorage.visitas){
+				localStorage.visitas=Number(localStorage.visitas)+1;
+			}else{
+				//localStorage.setItem("visitas",1);
+				localStorage.visitas=1;
+			}
+			document.write("Visistas: "+localStorage.visitas);
+		}else{
+			document.write("Sem suporte a Web Storage!");
+		}
+		function gravar(){
+			vnome=document.getElementById("fnome").value;
+			localStorage.corf=vcorf;
+			localStorage.cort=vcort;
+			localStorage.nome=vnome;
+		}
+		function defineCor(op,cor){
+			if(op==1){
+				document.body.style.backgroundColor=cor;
+				vcorf=cor;
+			}else{
+				document.body.style.color=cor;
+				vcort=cor;
+			}
+		}
+
+
+
+		/*
+		if(typeof(Storage)!="undefine"){ //pra verificar se o browser suporta webstorage e localstorage
+			localStorage.setItem("canal","CFBCursos"); //chave, valor a receber
+			localStorage.removeItem("canal");
+
+			var vcanal=localStorage.getItem("canal"); //pega a chave
+			var vcanal=localStorage.canal; //essa linha é a mesma coisa de cima só que mais rapida pra obter a chave, indo direto nela
+			//document.write(vcanal);
+		}else{			
+			document.write("Sem suporte a Web Storage!");
+		}
+		*/
+	</script>
+</head>
+<body>
+	<form= name="dados">
+		<label>Nome:</label><br>
+		<input type="text" name="fnome" id="fnome" size="20"><br><br>
+		<label>Cor fundo:</label><br>
+		<input type="radio" name="fcorF" onclick="defineCor(1,'#000')">Preto<br>
+		<input type="radio" name="fcorF" onclick="defineCor(1,'#fff')">Branco<br>
+		<input type="radio" name="fcorF" onclick="defineCor(1,'#f00')">Vermelho<br>
+		<input type="radio" name="fcorF" onclick="defineCor(1,'#0f0')">Verde<br>
+		<input type="radio" name="fcorF" onclick="defineCor(1,'#00f')">Azul<br><br>
+		<label>Cor texto:</label><br>
+		<input type="radio" name="fcorT" onclick="defineCor(2,'#000')">Preto<br>
+		<input type="radio" name="fcorT" onclick="defineCor(2,'#fff')">Branco<br><br>
+		<input type="button" value="Gravar" onclick="gravar()">
+	</form>
+
+
+</body>
+</html>

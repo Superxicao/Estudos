@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+
+		
+	</style>
+	<script>
+
+		location.assign("http://www.youtube.com/cfbcursos"); //redireciona pro site
+		location.replace("http://www.youtube.com/cfbcursos"); //apaga do historico
+		location.reload(); //fica dando reload na pagina
+
+		function p2(){
+			location.assign("p2.html"); //pode ser uma url tambem
+		}
+		function rec(){
+			location.reload(); //recarrega uma vez agora porque está dentro da função
+		}
+
+	</script>
+</head>
+<body>
+
+	<h1>Objeto Location</h1>
+	<button id="btnP2" onclick="p2()">Página 2</button>
+	<button id="btnReload" onclick="rec()">Recarregar</button>
+
+</body>
+</html>

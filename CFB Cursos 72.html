@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+		
+		
+	</style>
+	<script>
+
+	/*
+	function pagina(pg){
+		if(pg==2){
+			window.location.assign("p2.html");
+		}else if(pg==3){
+			window.location.assign("p2.html");
+		}
+	}
+	*/
+
+	function pagina(pg){
+		sessionStorage.nome=document.getElementById("fnome").value;
+		window.location.assign("p"+pg+".html");
+	}
+	function inicia(){
+		document.getElementById("btnP2").addEventListener("click",function(){
+			pagina(2);	
+		});
+		document.getElementById("btnP3").addEventListener("click",function(){
+			pagina(3);
+		});
+		document.getElementById("btnP3").addEventListener("click",function(){
+			sessionStorage.clear();
+		});
+	}
+	window.addEventListener("load",inicia);
+
+	</script>
+</head>
+<body>
+
+	<input type"text" name="fnome" id="fnome" size="20"><br><br>
+	<button id="btnP2">Página 2</button>
+	<button id="btnP3">Página 3</button>
+	<button id="btnLimpar">Limpar SessionStorage</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<title>CFB Cursos - Javascript</title>
+	<meta charset="utf-8"/>
+	<style>
+		body{
+			background-color: #800;
+			color: #fff;
+		}
+	</style>
+	<script>
+
+		function inicia(){
+			document.getElementById("painel").innerHTML=sessionStorage.nome;
+		}
+		window.addEventListener("load",inicia);
+
+	</script>
+</head>
+<body>
+
+	<h2>Página 2</h2>
+	<div id="painel"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<title>CFB Cursos - Javascript</title>
+	<meta charset="utf-8"/>
+	<style>
+		body{
+			background-color: #800;
+			color: #fff;
+		}
+	</style>
+	<script>
+
+	function inicia(){
+		document.getElementById("painel").innerHTML=sessionStorage.nome
+	}
+	window.addEventListener("load",inicia);
+
+	</script>
+</head>
+<body>
+
+	<h2>Página 3</h2>
+	<div id="painel"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>CFB Cursos</title>
+	<style>
+			
+	</style>
+	</head>
+<body>
+	<script>
+
+		var nomeCor="Vermelho"; //variavl escopo global
+
+		function cor(){
+			var nomeCor="Azul"; // se tirar o var, ela herda do escopo global, e vai imprimir dois "Azul"
+			document.write(nomeCor+"<br>");
+			document.write(this.nomeCor+"<br>"+nomeCor); //o primeiro se refere ao escopo global com o comando this.
+		}
+		cor()
+		document.write(nomeCor+"<br>"); // não será exibida porque está declarada dentro do escopo da funçao cor, como se estivesse dentro dessa caixa
+
+		function cor(){
+			var nomeCor="Azul";
+			document.write(nomeCor+"<br>");
+		}
+		cor()
+
+	</script>
+</body>
+</html>

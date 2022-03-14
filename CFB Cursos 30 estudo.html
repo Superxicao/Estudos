@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Cursos</title>
+ </head>
+<body>
+ 
+    <script>
+        var numeros=new Array(10,2,5,30,25,19,20,50);
+
+        function media (nums){
+            var tam=nums.length, soma=0
+            for (var i=0;i<tam;i++){
+                soma+=nums[i]
+                document.write(i+" - "+soma+"<br>");
+            }
+            return Math.round(soma/tam);
+        }
+        document.write(media(numeros));
+    </script>
+    
+</body>
+</html>

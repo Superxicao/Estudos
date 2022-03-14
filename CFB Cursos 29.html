@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>CFB Cursos</title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<script>
+
+			var angulo=45;
+			var valor=Math.max(1,2,3,4,5,6,7,8); //retornam o numero maximo e o minimo
+			var valor=Math.min(1,2,3,4,5,6,7,8);
+
+			var angulo=90;  // tem um bug pq aqui está em graus e o JS le em radiano o angulo, então tem que converter pra radiano
+
+			var c=Math.cos(angulo * Math.PI/180);
+			var s=Math.sin(angulo); // embaixo a mesma coisa, e tem um bug aqui nesse
+
+			document.write("Angulo: " + angulo + "<br>Cosseno: " + c + "<br>Seno: " + s);
+
+
+			var=valor=59
+			for (var i=0;i<6;i++){
+				document.write(Math.round((Math.random()*valor)+1)+"<br>"); //  entre 0 e 60
+			}
+
+
+			var valor=60
+			for (var i=0;i<6;i++){
+				document.write(Math.round(Math.random()*valor+"<br>");
+			}			
+
+			var valor=10;
+			var mt=Math.random(valor) //  ele sempre retorna um valor randomico de 0 a 1
+			var mt=Math.random()*valor; //  multiplica por 10
+			var mt=Math.round(Math.random()*valor)); // pra arredondar o valor, ficar inteiro. deve dar pra declarar inteiro tambem.
+			
+			var valor=4;
+			var mt=Math.pow(valor, 10); // eleva o numero a potencia depois da virgula ou, Math.sqrt(valor);
+
+			var valor=10.8
+			var mt=Math.ceil(valor);  // ceil arredonda pra cima, floor pra baixo, e round é arredondamento padrao, menor igual a 4 arredonda pra baixo, 5 pra cima pra cima
+			document.write(valor)
+
+			var valor=-10
+			var mt=Math.abs(valor);
+			document.write(mt); //valor absoluto, vai voltar 10 positivo
+			
+			var mt=Math.EU; //Numero de Euler ali, Math.SQRT1_2, SQRT2
+			document.write(mt)
+			
+
+			document.write(Math.PI)
+
+
+		</script>
+	</body>
+</html>

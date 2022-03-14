@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<title>CFB Cursos</title>
+	<style>
+		#jogador{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: #00f;
+			width: 50px;
+			height: 50px;
+		}
+	</style>
+	<script>
+
+        var jog, vel, dx, dy, px, py, anima, estado=1;
+
+		function inicia(){
+			vel=5;
+			dx=1;
+			dy=0;
+			px=0;
+			py=0;
+			jog=document.getElementById("jogador");
+			jog.addEventListener("click",function(){
+				if(estado){
+					estado=0
+					cancelAnimationFrame(anima);
+				}else{
+					estado=1
+					anima=requestAnimationFrame(game);
+				}
+            });
+			game();
+		}
+		function game(){
+			px+=dx*vel;
+			//py+=dy*vel;
+			jog.style.left=px+"px";
+			//jog.style.top=py+"px";
+			if(px>800){
+				dx=-1;
+			}else if(px<0){
+				dx=1;
+			}
+			anima=requestAnimationFrame(game);
+		}
+		window.addEventListener("load",inicia);
+	</script>
+	</head>
+<body>
+    <div id="jogador"></div>
+    <button id="b1">Iniciar</button>
+	<button id="b2">Parar</buton>
+
+	<script>
+
+	</script>
+</body>
+</html>

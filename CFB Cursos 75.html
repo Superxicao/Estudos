@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+		
+		
+	</style>
+	<script>
+
+		function inicia(){
+			document.getElementById("btnContar").addEventListener("click"),function(){
+				var lista=document.getElementById("listaElementos");
+				var num=lista.childNodes.length; //childNodes é um método
+				alert(num);
+			});
+
+			document.getelementById("btnAdd").addEventListener("click",function(){
+				var lista=document.getElementById("listaElementos");
+				var texto=document.getelementBuId("fnovo");
+				var li=document.creatElement("li");
+				li.textContent=texto.value;
+				lista.insertBefore(li,lista.childNodes[0]); //vai inserir antes do elemento 0 já que pode ser acessado o childNodes como vetor. se for antes do elemento 1, ele vai colocar um pra frente e o resto na frente do 0
+				//lista.appendChild(li);
+				texto.value="";
+				texto.focus();
+			});
+		}
+		window.addEventListener("load",inicia);
+
+	</script>
+</head>
+<body>
+
+	<input type="text" id="fnovo><button id="btnAdd">Adicionar</button><button id="btnContar">Contar</button><br><br>
+	<ul id="listaElementos"></ul>
+
+</body>
+</html>

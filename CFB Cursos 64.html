@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+		
+	</style>
+	<script>
+
+		function inicia(){
+			var qtde=window.length;
+			var painel=document.getElementById("painel").innerHTML=qtde; //então mostra quantos frames tem na pagina, e se vc aumenta continua mostrando
+			/*for( var i=0;i<qtde;i++){
+				window.frames[i].location="http://cbfcursos.com.br"; //colocou em cada frame o site se abrindo dentro dela
+			}*/
+			window.frames[0].location="http://cbfcursos.com.br"; //ou 1, etc, o número do frame que se quiser
+		}
+
+		window.addEventListener("load",inicia);
+	</script>
+</head>
+<body>
+	<iframe src="p2.html"></iframe>
+	<iframe src="p2.html"></iframe>
+	<iframe src="p2.html"></iframe>
+	<iframe src="p2.html"></iframe>
+	<iframe src="p2.html"></iframe>
+
+	<div id="painel"></div>
+</body>
+</html>
+
+
+
+PAGINA p2.html:
+//Sobre a incompatibilidade do Chrome em ñ receber a mudança de cor no body pelo frame, em vez de somente parent no comando, tentem usar window.parent.document.body.style.backgroundColor, ele realizara a mudança de boa 
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>CFB Cursos - Javascript</title>
+	<meta charset="utf-8"/>
+	<style>
+		body{
+			background-color:#fff;
+		}
+	</style>
+	<script>
+
+		function mudaCor(cor){
+			parent.document.body.style.backgroundColor=cor;
+		}
+
+	</script>
+</head>
+<body>
+	<button onclick="mudaCor('#f00')">Vermelho</button>
+	<button onclick="mudaCor('#0f0')">Verde</button>
+	<button onclick="mudaCor('#00f')">Azul</button>
+</body>
+</html>
+
+
+
+
+
+
+/*
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+		#painel{
+			border: 1px solid #000;
+			border-radius: 10px;
+			padding: 15px;
+			width: 2000px;
+			height: 2000px;
+			background-color; #ddd;
+		}		
+	</style>
+	<script>
+
+		var l, a, px, py, painel;
+
+		function info(){
+
+			l=window.innerWidth;
+			a=window.innerHeight;
+			px=window.screenX;
+			py=window.screenY;
+			painel.innerHTML="L:"+l+" - A:"+a+"<br>X:"+px+" - Y:"+px;
+		}
+		function rolar(){
+			window.scrollBy(500,500); //da pra usar em animação, posicao x e y como parametros
+		}
+		function inicia(){
+			document.getElementById("").addEventListener("click",info);
+			document.getElementById("").addEventListener("click",rolar);
+			painel=document.getElementById("painel");
+		}
+		window.addEventListener("load",inicia);
+
+	</script>
+</head>
+<body>
+	<button id="btnTam">Tamanho</button>
+	<button id="btnPos">Rolar</button>
+
+	<div id="painel"></div>
+	
+</body>
+</html>
+*/

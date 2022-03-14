@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+		
+		
+	</style>
+	<script>
+
+		function inicia(){
+
+			var elementos=document.getElementById("p5"); //curso de c++
+			alert(elemento.parentNode.nodeName);
+			elemento.remove(); //removeu o c++, basta especificar o id ali em cima e apagar de acordo com o numero
+
+			var elementos=document.getElementById("cfbcursos").childNodes;
+			document.getElementById("cfbcursos").removeChild(elementos[11]); //removeu o photoshop
+			document.getelementById("cfbcursos").remove();
+		}
+
+		window.addEventListener("load",inicia);
+
+	</script>
+</head>
+<body>
+
+	<div id="cfbcursos">
+		<p>Curso de Javascript</p>
+		<p>Curso de HTML/HTML5</P>
+		<p>Curso de CSS3</p>
+		<p>Curso de PHP/MySQL</p>
+		<p>Curso de C++</p>
+		<p>Photoshop</p>
+		<p>Curso de Flash</p>
+		<p>Curso de Unity</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+
+		#painel{
+			width: 400px;
+			height: 500px;
+			border: 1px solid #000;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		
+	</style>
+	<script>
+
+		var painel;
+
+		function localizar(pos){ //função callback
+			var c=pos.coords; //chamada pra obter as cordenadas
+			painel.innerHTML+="Loc: Lat: " + c.latitude + " - Lon: " + c.longitude + "<hr>";
+		}
+
+		funtion verifica(){
+			painel=document.getElementById("painel");
+			painel.innerHTML+="Nome do Browser: " + navigator.appName + "<hr>";
+			painel.innerHTML+="Versão do Browser: " + navigator.appVersion + "<hr>";
+			painel.innerHTML+="Cookies: " + navigator.cookieEnabled + "<hr";
+			//painel.innerHTML+="Localização: " + navigator.geolocation.getCurrentPosition(localizar) + "<hr>"; //sao 3 parametros, funçao caso tiver sucesso na obtenção da geolocalizacao, funcao caso obtenha erro e a terceira é tipo parametros pra precisao de localização,etc
+			navigator.geolocation.getCurrentPosition(localizar); //aqui chama a função e imprime na mesma linha
+			painel.innerHTML+="Idioma: " + navigator.language + "<hr>";
+			painel.innerHTML+="onLine: " + navigator.onLine + "<hr>";
+			painel.innerHTML+="S.O.: " + navigator.plataform + "<hr>";
+			painel.innerHTML+="Engine: " + navigator.product + "<hr>";
+			painel.innerHTML+="Agente: " + navigator.userAgent = "<hr>";
+
+			latitude -19.9648593 longitude -44.0278092 endereço do professor kkk
+		}
+
+		window.addEventListener("load",verifica);
+
+	</script>
+</head>
+<body>
+
+	<div id="painel"></div>
+	
+</body>
+</html>
+

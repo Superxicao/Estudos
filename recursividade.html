@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+        <script>
+
+            var n;
+
+            function contagem (n){
+                if(n==0){
+                    return 0;
+                }else if(n%2==1){
+                    document.write(n+" ");
+                }
+                n=contagem(n-1);
+            }
+            contagem(10);
+
+        </script>
+    
+</body>
+</html>

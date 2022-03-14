@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<title>CFB Cursos</title>
+	<style>
+		
+		
+	</style>
+	<script>
+
+
+	</script>
+	</head>
+<body>
+
+	<p id="txt">CFB Cursos - Curso de Javascript</p>
+
+	<script>
+
+		var texto=document.getElementById("txt").innerHTML;
+		var num=15		
+		var res=texto.toString().substr(22,10); // imprime como string, lembra o parseFloat
+
+		document.write(res);
+
+		var res = num.toString();
+		var bin = num.toString(2);
+		var oct = num.toString(8);
+		var hex = num.toString(16); // toString faz conversão de bases
+
+		document.write(res+"<br>");
+		document.write(bin+"<br>");
+		document.write(oct+"<br>");
+		document.write(hex+"<br>");
+
+		texto="CFB Cursos - Curso de Javascript";
+		res=texto.trim(); // O TRIM CORTA OS ESPAÇOS ANTES E DEPOIS DA STRING, CADEIA DE CARACTERES. o html ja limpa os espaços extras, mas o alert por exemplo não.
+
+		document.write(texto);
+
+		texto="CFB Cursos - \'Curso\' de Javascript"; // esse faz com que as aspas apareçam, neutraliza o efeito das aspas, se colocar \\Curso\\ a primeira barra neutraliza a segunda e ela aparece
+		texto="\nCurso de\n"; no alert ele renderiza, no html não pq esse é o papel do br;
+
+
+	</script>
+</body>
+</html>

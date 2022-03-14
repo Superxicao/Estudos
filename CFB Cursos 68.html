@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+
+		
+	</style>
+	<script>
+
+
+	</script>
+</head>
+<body>
+	<h1>Home - aula68.html</h1>
+
+	<a href="p2.html#cfbcursos#curso_de_javascript">Página 2</a>	
+</body>
+</html>
+
+
+
+
+
+
+/*OBJETO LOCATION
+OUTRO EXEMPLO MÉTODO GO;
+MÉTODO WRITE
+PROPRIEDADE HASH
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+p2.html
+
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+		body{
+			background-color: #f00;
+			color:#fff;
+	}
+	a{color: #fff;}
+		
+	</style>
+	<script>
+
+		var aux=location.hash;
+		//document.write(aux+"<hr>");
+
+		var dados=aux.split("#");
+		//document.write(dados[1]);
+		var v1=dados[1];
+		var v2=dados[2];
+		document.write(v1);
+		document.write("<br>");
+		var h=location.hostname;
+		document.write(h);
+		document.write("<br>");
+
+		var h=location.href;
+		var h=location.href="http://www.cfbcursos.com.br";
+		document.write(h);
+		document.write("<br>");
+		
+		var o=location.origin; //protocolo, hostname, porta da url
+		document.write(o);
+		document.write("<br>");
+
+		var p=location.pathname; // caminho apos protocolo e hostname, tudo que se tem apos isso, tipo protocolo - http:// hostname - www.youtube.com/ pathname - cfbcursos
+		document.write(o);
+		document.write("<hr>");
+
+		var pr=location.protocol; //protocolo
+		document.write(pr);
+		document.write("<hr>");
+
+		var aux=location.hash;
+		var dados=aux.split("#);
+		var v1=dados[1];
+		var v2=dados[2];
+		document.write(v1);
+		document.write("<br>");
+		var h=location.href;
+		document.write(h);
+		document.write("<br>");
+		var o=location.origin;
+		document.write(o);
+		document.write("<br>");
+		var p=location.pathname;
+		document.write(p);
+		document.write("<br>");
+		var pr=location.protocol;
+		document.write(pr);
+		document.write("<br>");
+
+		aux=location.search;
+		dados=aux.split("?");
+		v1=dados[1];
+		v1=dados[1].split("=")[1]; // splitando tudo q vem depois do igual, dessa vez
+		document.write(v1);
+
+		document.write("<hr>");
+
+	</script>
+</head>
+<body>
+	<h1>Pagina 2 - p2.html</h1>
+	<a href="aula68.html">Voltar</a>
+
+	//na hora do search
+	<a href="p2.html?canal=cfbcursos">Página 2</a>	
+</body>
+</html>

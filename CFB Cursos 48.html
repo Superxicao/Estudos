@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<title>CFB Cursos</title>
+	<style>
+		
+		
+	</style>
+	<script>
+
+
+	</script>
+	</head>
+<body>
+
+	<p id="txt">CFB Cursos - Curso de Javascript</p>
+
+	<script>
+
+		var texto=document.getElementById("txt").innerHTML;
+		var res=texto1.indexOf("J"); // é case sensitive, o J Maiúsculo ele retorna posição 22, se colocar j minusculo ele retorna -1 que significa que não tem. se colocar 0 ele retornará o C
+		var texto2;
+
+		res=texto1.lastIndexOf("C"); // retorna a posição do ULTIMO caractere pesquisado que no caso desse C maiusculo seria posição 13
+		
+		document.write(res);
+		
+		if (res < 0){
+			document.write("Letra não encontrada");
+		}else{
+			document.write(res);
+		}
+
+		res=texto1.localeCompare(texto2); // se for 0 são iguais se for !=0 (diferente de zero) sao diferentes
+
+		if (res == 0){
+			document.write("Strings iguais");
+		}else{
+			document.write("Strings diferentes");
+		}
+
+
+		res=texto.slice(3,10); // primeira posição, até a ultima, nesse caso cursos, se fosse 22,32 seria javascript
+
+		document.write(res);
+
+		res=texto.split(" "); // transforma a variavel receptora num vetor, qnd coloca o espaço, transforma cada palavra em um numero, tipo, cfb é a primeira e javascript é a ultima a 5, o hifem é a 2
+
+		document.write(res[5]);
+
+		res=texto.substr(4,6); // indica posição inicial, e tamanho do corte ---  nesse caso le corta a palavra Curso q é onde começa
+		document.write(res);
+
+		res=texto.toUpperCase(); //td maiusculo
+		res=texto.toLowerCase(); //td minusculo
+		res=texto.tuUpperCase().substr(22,10); // nesse caso usou dois metodos, pegou a palavra Javascript e transformou tudo em maiuscula
+
+		document.write(res);
+	</script>
+</body>
+</html>

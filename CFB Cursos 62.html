@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+		
+	</style>
+	<script>
+
+		var minhaJanela
+
+		window.open();
+
+		var minhaJanela=window.open();
+
+		var minhaJanela=window.open("tmp.html");
+
+		var minhaJanela=window.open("tmp.html","_blanck"); //abre nova aba
+		var minhaJanela=window.open("tmp.html","_self"); //abre na mesma janela
+
+		var minhaJanela=window.open("tmp.html",cfb); // abre dentro do iframe la do html
+		var minhaJanela=window.open("tmp.html", "_blank", "width=300, height=300"); //abre uma nova janela de 300 por 300
+		var minhaJanela=window.open("tmp.html", "_blank", "width=300, height=300, top=300, left=300");
+
+
+		function abreJ(){
+			var minhaJanela=window.open("tmp.html","_blank","width=300,height=300,top=300,left=300"); //posiçao da janela acho que no monitor
+		}
+		function fechaJ(){
+			minhaJanela.close();
+		}
+
+		var minhaJanela1,minhaJanela2;
+
+		function abreJ(){
+			minhaJanela1=window.open("tmp.html","_blank","width=300,height=300,top=300,left=300);
+			minhaJanela2=window.open("tmp.html","_blank","width=300,height=300,top=300,left=300);
+		}
+		function fechaJ(){
+			minhaJanela1.close();
+			minhaJanela2.close();
+		}
+
+	</script>
+</head>
+<body>
+
+	<button onclick="abreJ()">Abre Nova Janela</button>
+	<button onclick="fechaJ()">Fecha Janela</button>
+	<iframe name="cfb" src=""></iframe>
+	
+</body>
+</html>
+
+
+
+/*
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+		body{
+			background-color: #f00;
+		}
+		h3{
+			color: #fff;
+		}
+	</style>
+	<script>
+
+
+
+	</script>
+</head>
+<body>
+
+	<h3>CFB Cursos</h3>
+	
+</body>
+</html>
+*/

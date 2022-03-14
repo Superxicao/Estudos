@@ -1,0 +1,122 @@
+import wixData from "wix-data"
+
+export asyc function verificarUsuarioExistente(email, database) {
+	let status;
+	try {
+		let resultado = await wixData.query(database).eq('email', email).find()
+
+		if (resultado.intems[0]) {
+			status = "true"
+		} else {
+			status = "false"
+		}
+	} catch (erro) {
+		console.log(erro)
+		status = "erro"
+	}
+	return status;
+}
+
+
+-----------------------------
+
+
+import {verificarUsuarioExistente} from "backend/app"
+
+$w.onReady(function () {
+
+});
+
+export async function bbtnEnviarEmail_click(event,$w) {
+	let email = $w("#tbMail").value;
+	let status = await verificarUsuarioExistente(email, "usuarios");
+
+	if(status === "true"){
+
+	}else if (status === "false") {
+
+	}else{
+
+	}
+}
+
+ESQUECI MINHA SENHA	
+
+import { verificarUsuarioExistente} from "backend/app"
+import { emailRecuperarSenha} from "backend/mail"
+import { displayErro, validar, gerarCodigo } from "public/util"
+
+$w.onReady(function () {
+
+
+});
+
+export async functin bbtnEnviarEmail_click(event, $w) {
+	if (validar($w("#tbMail"), $w("#msgErro"), "E-mail") === "ok") {
+		let email = $w("#tbmail").value;
+		let status = await verificarUsuarioExistente(email, "usuarios");
+		if (status === "true") {
+			/*redirecionamento*/
+			emailRecuperarSenha("usuarios", $w("#tbMail").value )
+
+		} else if (status === "false") {
+			displayErro($w("#msgErro"), "O e-mail informado não está cadastrado em nossos registros.")
+		} else {
+			displayErro($w("#msgErro"), "Erro ao acessar o banco de dados, consulte a administraçãodo sistema.")
+		}
+	}
+}
+
+
+
+MAIL.JSW -----------------------------------------
+
+import { fetch } from "wix-fetch';
+import wixData from "wix-data"
+import {pegarNome, gerarCodigo } from "backend/app"
+
+export async function emailRecuperarSenha(bancoDeDados, email) {
+
+	let nome = await pegarNome(bancoDeDados, email)
+	let destino = email
+	let codigo = await gerarCodigo(6);
+
+///////////////// esses valores mudam
+	let parametros = {
+		user_id: ??????????????,
+		service_id: 'gmail',
+		template_id: 'recuperacao_de_senha',
+
+		///////corpo do email
+		template_params: {
+			'destino': destino,
+			'nome': nome,
+			'codigo': codigo,
+		}
+	};
+///////////
+
+	let headers = {
+		"contend-tyoe": "application/json"
+	};
+
+	let options = {
+		method: 'POST',
+		headers: headers,
+		body: JSON.stringify(parametros)
+	};
+	let status;
+	fetch('https://api.emailjs.com/api/v1.0/email/send', options0
+		.then(httpResponse) => {
+			if (httpResponse.ok) {
+				status = "ok";
+			} else {
+				
+
+
+
+DATAACESS.JSW
+
+import wixData from "wix-data"
+
+function criarRecuperacao

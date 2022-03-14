@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<title>CFB Cursos</title>
+	<style>
+		
+		
+	</style>
+	<script>
+
+
+	</script>
+	</head>
+<body>
+
+	<p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+
+	<script>
+
+		var texto=document.getElementById("txt").innerHTML;
+
+		var res=texto.match("Curso");
+		
+		res=texto.match("de"); //dá só um retorno
+		res=texto.match(/de/g); // dá as palavras e armazena num array
+		res=texto.match(/Javascript/ig); // mostra sem case sensitive, maiuscula ou minuscula
+		res=texto.match(/o/ig); //mostra qnts letras o tem na string
+		res=texto.match(/[oa]/ig); //conta na ordem e da pra mostrar todas as letras o e a na string
+		res=texto.match(/[^oa]/ig); // resultado da pra mostrar todas menos as o e a, mostra todas as outras letras do array
+		res=texto.match(/[a-g]/ig); //retorna todos os caracteres de a até a letra g
+		res=texto.match(/[^a-g]/ig); // restorna todos os caracteres menos os de a ate o g
+		res=texto.match(/[a|o|e]/ig); // mesma coisa q se não tivesse o |, fosse só aoe, retorna essas letras
+		res=texto.match(/\d/ig); //retorna numerais
+		res=texto.match(/\D/ig); // retorna todos que não sao numerais
+		res=texto.match(/\w/ig); // exclui traços, espaços e tudo q não for letras e numerais, q só mostra eles
+
+		document.write(res+" : "+res.lentgh + ",br>");
+		document.write(res + " : " + res.lentgh + "<br>");
+		document.write(res);
+		document.write(res[1]); // ou 0
+		document.write();
+		
+	</script>
+</body>
+</html>

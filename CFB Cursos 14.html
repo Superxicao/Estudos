@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang"pt-br">
+	<head>
+		<title> CFB Cursos - Javascript</title>
+		<meta charset ="UTF-8"/>
+
+		<script>
+		
+			//var cor=new Array();
+			var mochila=[];
+		
+			mochila.push("Faca");
+			mochila.push("Corda");
+			mochila.push("Pederneira");
+			mochila.push("Chave");
+			mochila.push("Lanterna");
+			mochila.unshift("Pedra"); // insere no inicio
+
+			mochila.pop(); //remove o ultimo elemento, deixou undefined a impressão do 5 la embaixo
+			mochila.pop(); //removeu mais um elemento, dois undefined la embaixo
+
+			mochila.shift(); //removeu o pedra, fica o primeiro e o ultimo com o removido do pop.
+
+			mochila.splice(2,3); //remove os elementos. no elemento 2, remove 3 elementos a partir dele, contando com o primeiro elemento, o 2. quando remove um, o outro elemento q tá na frente cai pro indice anterior
+
+			document.write(mochila[0]+"<br>");
+			document.write(mochila[1]+"<br>");
+			document.write(mochila[2]+"<br>");
+			document.write(mochila[3]+"<br>");
+			document.write(mochila[4]+"<br>");
+			document.write(mochila[5]+"<br>");
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<title>CFB Cursos</title>
+	<style>
+		
+		
+	</style>
+	<script>
+
+
+	</script>
+	</head>
+<body>
+
+	<p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+
+	<script>
+
+		var texto=document.getElementById("txt").innerHTML;
+		var txt2 = " - aula 46 do curso de javascript";
+
+		var res=texto.search(/curso/i); //o g não funciona
+		res=texto.replace(/curso/i,"aula");
+		res=texto.replace(/curso/ig, "aula); // removendo o case sensitive e fazendo a substituição
+		res=texto.charAt(2); //retorna o caractere da posição do array da string, nesse caso aí 0 1 2 é a posição B
+		res=texto.charCodeAt(0); // o 0 é o C maiusculo, ele retorna o codigo do caractere, no caso o do 0 que é a letra C maiuscula ele retorna 67
+		res=texto.charCodeAt();
+		res=texto.concat(txt2); // num write ele concatena as strings
+		res=texto.concat(" - aula 46 do curso de javascript"); // da pra passar a string direto
+		res=texto.concat(" - aula 46 do curso de javascript" + txt2); //pra quando quiser concatenar varias strings
+		
+		document.write(res);
+		document.write(String.fromCharCode(67)); // ele retorna o caractere qnd vc entra com o codigo
+		document.write(String.fromCharCode(res)); // nesse caso ele retornou a C pois o res era 67
+		
+	</script>
+</body>
+</html>

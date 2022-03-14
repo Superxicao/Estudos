@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFB Cursos</title>
+	<style>
+		
+		
+	</style>
+	<script>
+
+		function inicia(){
+			var novoH1=docment.creatElement("h1");
+			var sub=2;
+			var listaCursos=document.getElementById("cfbcursos");
+			//var novo=document.getElementById("novo");
+			var antigoP=listaCursos.childNodes[sub];
+			var txtH=document.createTextNode(antigoP.innerHTML);
+			novoH1.appendChild(txtH);
+			listaCursos.replacechild(novo.antigoP);
+			listaCursos.replaceChild(novoH1,antigoP); //informa o elemento novo e o antigo que será substituido
+		}
+		window.addEventListener("load",inicia);
+
+	</script>
+</head>
+<body>
+
+	<!--<h1 id="novo">Novo Elemento</h1>-->
+	<div id="cfbcursos">
+		<p>Curso de Javascript</p>
+		<p>Curso de HTML/HTML5</P>
+		<p>Curso de CSS3</p>
+		<p>Curso de PHP/MySQL</p>
+		<p>Curso de C++</p>
+		<p>Photoshop</p>
+		<p>Curso de Flash</p>
+		<p>Curso de Unity</p>
+	</div>
+	
+</body>
+</html>

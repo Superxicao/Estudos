@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lan="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<title>CFB Cursos</title>
+	<style>
+		#dv1{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+			background-color: #fff;
+			position: absolute;
+			left: 0px;
+			top: 100px;
+		}
+		#b1{
+			width: 30px;
+			height: 30px;
+			border: 1px solid #000;
+			background-color: #606060;
+			position: absolute;
+			left: 0px;
+			top: 34px;
+		}
+		#b2{
+			width: 30px;
+			height: 30px;
+			border: 1px solid #000;
+			background-color: #606060;
+			position: absolute;
+			left: 34px;
+			top: 0px;
+		}
+		#b3{
+			width: 30px;
+			height: 30px;
+			border: 1px solid #000;
+			background-color: #606060;
+			position: absolute;
+			left: 69px;
+			top: 34px;
+		}
+		#b4{
+			width: 30px;
+			height: 30px;
+			border: 1px solid #000;
+			background-color: #606060;
+			position: absolute;
+			left: 34px;
+			top: 69px;
+		}
+		#dv6{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+			background-color: #909090;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+	</style>
+	<script>
+
+		var px=0;
+		var py=100;
+        obj=document.getElementById("dv1");
+
+        function começar(){
+		    document.addEventListener("keydown",move);
+			document.addEventListener("click",move2)
+        }
+    
+		function move(){
+			var tecla=event.keyCode; 
+
+            if(tecla==13){
+                obj.style.backgroundColor="#f00";
+                alert("Vamos começar a brincar.");
+            }
+            if(tecla==37){
+                    px-=10;
+                    obj.style.left=px+"px";
+                }else if(tecla==38){
+                    py-=10;
+                    obj.style.top=py+"px";
+                }else if(tecla==39){
+                    px+=10;
+                    obj.style.left=px+"px";
+                }else if(tecla==40){
+                    py+=10;
+                    obj.style.top=py+"px";
+                }else if(tecla==70|| tecla==102){
+                    alert("Evento keydown Removido, obrigado por brincar.");
+                    obj.style.backgroundColor="#fff";
+                    document.removeEventListener("keydown",move);
+                    começar();
+                }
+		}
+		
+		function move2(mouse){
+			var obj=document.getElementById("dv1");
+			var tecla=event.keyCode; //37= esquerda negativo eixo x, 38=cima negativo eixo y, 39 direita positivo eixo x, 40 baixo positivo eixo y
+			
+            obj.style.backgroundColor="#f00";
+
+			
+			if(mouse==37){
+				tecla=37
+				px-=10;
+				obj.style.left=px+"px";
+			}else if(mouse==38){
+				tecla=38
+				py-=10;
+				obj.style.top=py+"px";
+			}else if(mouse==39){
+				tecla=39
+				px+=10;
+				obj.style.left=px+"px";
+			}else if(mouse==40){
+				tecla=40
+				py+=10;
+				obj.style.top=py+"px";
+			}else{
+				alert("Toque apenas nas setas.");
+			}
+		}
+        começar();
+
+        
+		
+	</script>
+	</head>
+<body>
+	<div id="dv1"></div>
+	<div id="dv6">
+		<button id="b1" onclick="move2(37)">←</button>
+		<button id="b2" onclick="move2(38)">↑</button>
+		<button id="b3" onclick="move2(39)">→</button>
+		<button id="b4" onclick="move2(40)">↓</button>
+	</div>
+	<script>
+
+	</script>
+</body>
+</html>
