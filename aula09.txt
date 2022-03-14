@@ -1,0 +1,69 @@
+frase='Curso em Vídeo Python'
+print(frase)
+print(frase[9])#9
+print(frase[9:13] # começa no 9 até o 12, o 13 ele exclui
+print(frase[9:21])# vai só ate o 20
+print(frase[9:21:2])# v d o p t o pulando 2
+print(frase[:5] # do 0 ate o 4, sem o 5
+print(frase[15:] #do 15 até o final
+print(frase[9::3]) #9 até o fim pulando 3 v e p a
+len(frase)#tamanho
+frase.count('o')# conta quantas vezes tem a o na string
+frase.count('o',0,13)# conta com fatiamento, o do 0 até o 13(sem o 13)
+frase.find('deo')
+frase.find('Android')# retorna -1 pq nao existe na string
+'Curso' in frase #True ou False
+frase.replace('Python','Android') #nao substitui diretonna string, teria q salvar numa variavel pra isso
+frase.upper()#tudo maiúsculo
+frase.lower()#tudo minúsculo
+frase.capitalize()#joga tudo ora minúsculo só a primeira pra maiúsculo
+frase.title()#onde tem espaço ele transforma a proxima letra em maiuscula, as primeiras letras das palavras
+frase.strip()#tira os espaços do inicio e do fim da string
+frase.rstrip()#tira os espaços da right direita
+frase.lstrip()#tira os espaços da esquersa left
+frase.split()#transforma as strings numa lista excluindo os espaços, pelas palavras, por padrão o caractere de split é o espaço, mas da pra mudar isso
+'-'.join(frase) #vai unir a lista inserindo entre elas o caractere - que pode ser um espaço vazio, número, ou qlqr string
+
+print(frase)
+print(frase[3])
+print(frase[3:13])
+print(frase[:13])
+print(frase[13:]) #13 ate o fim
+print(frase[1:15])
+print(frase[1:15:2])#do um até o 15 pulando 2 em 2
+print(frase[1::2])
+print(frase[::2])
+print(frase.count('o'))
+print(frase.count('O'))
+print(frase.upper().count('O') a
+print(len(frase))
+frase='  Curso em Vídeo Python   '
+print(len(frase))
+print(len(frase.strip())
+print(frase)#'Curso em Vídeo Python'
+frase=frase.replace('Python','Android')
+print(frase)#'Curso em Vídeo Android'
+print('Curso' in frase)#True
+frase='Curso em Vídeo Python'
+print(frase.find('Curso')) #0 posição 0
+print(frase.find('Vídeo')) #9 vídeo está na posição 9
+print(frase.find('vídeo')) #-1 porque não tem com v minúsculo ou sem acento por exemplo
+print(frase.lower().find('vídeo'))
+print(frase.split()) #mostra uma lista ['Curso','em'...
+dividido=frase.split()
+print(dividido)
+print(dividido[0]) #Curso
+print(dividido[2][3]) #dividido elemento 2 item 3 q é a letra r é vídeo e 3 é letra e
+
+
+
+
+
+
+
+
+#imprimir textos gigantes com 3 aspas, ou 3 asnpas simples
+
+print("""
+
+texto gigante """)

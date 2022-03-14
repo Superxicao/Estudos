@@ -1,0 +1,11 @@
+c=str(input('Digite o nome da cidade: '))
+
+a=c.title().strip()
+print(a)
+ver=a.find('Santo')
+print(ver)
+c2=c.split()
+ver2=c2[0].lower().find('santo')
+print(ver2)
+ver3=c2[0].capitalize().find('Santo')
+print(ver3)

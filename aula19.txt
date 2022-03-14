@@ -1,0 +1,80 @@
+dados=['Pedro',25]
+          0     1
+dados=['Pedro',25]
+	'Nome',idade
+dados=dict()
+dados={'nome':'Pedro','idade':25}
+print(dados['nome'])	Pedro
+dados['sexo']='M'	como append não funciona em dicionário basta colocar assim que ele já adciona
+dados=['Pedro',25,'M']
+del dados['idade']	apaga a idade
+
+filme{'título':'Star Wars',
+      'ano':1997,
+      'diretor':'George Lucas'
+      }
+print(filme.values())		imprime 'Star Wars',1977,'George Lucas'.
+print(filme.keys())		a parte debaixo título, ano, diretor
+print(filme.items())		ele pega tudo, as chaves e os valores
+
+for k,v in filme.items():
+	print(f'O (k) é (v)')	O título é Star Wars, O ano é 1977, O diretor é George Lucas
+
+locadora=[['titulo':'Star Wars','ano':1977,'diretor':'George Lucas'],
+          ['titulo':'Avengers','ano':2012,'diretor':Joss Whedon'],
+          ['titulo':'Matrix','ano':1999,'diretor':'Wachowskik']]
+print(locadora[0]['ano'])	1977
+print(locadora[2]['titulo'])	matrix
+
+pessoas={'nome':'Gustavo','sexo':'M','idade':22}
+print(pessoas)		mostra os items todos
+print(pessoas[0])	da erro oq o elemento 0 é o nome
+print(pessoas['nome']	Gustavo
+print*pessoas['idade']	22
+print(pessoas['sexo']	M
+print(f'O {pessoas["nome"]} tem {pessoas["idade"]} anos.')	tem que colocar as aspas duplas pra não dar erro ali e formatar a string
+print(pessoas.keys())		mostra o dict_keys(['nome','sexo','idade'])
+print(pessoas.values())		dict_values(['Gustavo','M',22])]
+print(pessoas.items())		imprime tudo, nome gustavo sexo masculino idade 22 lista composta de 3 tuplas
+
+for k in pessoas.keys():
+	print(k)		nome sexo idade, as chaves
+for k in pessoas.values():
+	print(k)		Gustavo M 22
+for k,v in pessoas.items():	aqui não tem o enumerate, tem que se assim	
+	print(f'{k}={v}')	nome gustavo sexo m idade 22
+del pessoas['sexo']		apagou e só fica nome e idade
+pessoas['nome']='Leandro'	mudou o nome, são alteráveis os dicionários
+pessoas['peso']=98.5		muda direto sem precisar dar append
+
+brasil=[]
+estado1={'uf':'Rio de Janeiro','sigla':'RJ'}
+estado2={'uf':'São Paulo','sigla':'SP'}
+brasil.append(estado1)
+brasil.append(estado2)
+
+print(estado1)
+print(estado2)
+print(brasil)		mostra uma lista com dicionarios
+print(brasil[0])	rio de janeiro
+print(brasil[1])	sao paulo
+print(brasil[0]['uf']		rio de janeiro
+print(brasil[1]['sigla']	sp
+
+estado=dict()
+brasil=list()
+for c in range(0,3)
+	estado['uf']=str(input('Unidade Federativa: '))
+	estado['sigla']=str(input('Sigla do Estado: '))
+	brasil.append(estado)		da erro porque ele está conectando as listas sem copiar
+	brasil.append(estado[:])	da erro tambem porque é o sistema de fatiamento de strings, não de dicionário
+	brasil.append(estado.copy())	SOLUÇÃO
+print(brasil)		deu acre, acre, acre, etc
+
+for e in brasil:
+	print(c)	mostra cada estado é um dicionario
+	for k, v in e.items():
+		print(f'O campo {k} tem valor {v}.')
+	for v in e.values():
+		print(v,end='')		rio rj sao paulo sp, etc..
+	print()

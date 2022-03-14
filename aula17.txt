@@ -1,0 +1,92 @@
+79 e 82 83 ótmos algoritmos pra estudar nos comentários dos exercícios
+
+
+lanche=('hamburguer','suco','pizza','pudim')
+print(lanche[2]) pizza
+lanche[3]='picolé
+
+tuplas=()
+listaS=[]
+
+lanche=['hamburguer','suco','pizza','pudim']
+lanche=[3]='picolé'
+lanche=['hamburguer','suco','pizza','picolé']
+listas são mutáveis
+lanche.append('cookie')			só assim pra ele adicionar elementos
+lanche.insert(0,'cachorro quente')	posição elemento. ele pega o número da posição e chega pra frente todos os outros elementos. ganham mais 1 número de índice, o 3 vira 4, o 2 vira 3, e assim sucessivamente.
+del lanche[3]		apaga a pizza
+lanche.pop(3)		pop geralmente é pra eliminar o último elemento, mas você pode dar o índice objetivado
+lanche.remove('pizza')	já o método removo você escolhe o elemento, o valor que quer eliminar, não o índice.
+
+se você quer eliminar pela chave, pelo índice, você usa o comando del ou o método pop
+se você quiser eliminar pelo conteudo ai voce utiliza o método remove
+eles eliminam o elemento e resposicionam a contagem dos índices
+
+lanche.pop() 	remove o último elemento, no caso o cookie
+lanche=['cachorro quente','hamburguer','suco','picolé']
+lanche.remove('pizza')		vai dar erro porque não tem mais a pizza na lista
+
+if 'pizza' in lanche:
+	lanche.remove('pizza')
+valores=list(range(4,11)) 	forma prática de criar uma lista
+
+valores=[4,5,6,7,8,9,10]
+índices- 0 1 2 3 4 5  6
+
+ele poderia criar elementos pulando de 2 em 2 por exemplo. parece que as manipulações de strings se aplicam â função list
+valores=list(range(4,11,2)
+
+valores=[8,2,5,4,9,3,0]
+valores.sort()
+valores 0 2 3 4 5 8 9
+valores.sort(reverse=True)
+valores 9 8 5 4 3 2 0
+len(valores) = 7 valores
+
+
+num=(2,5,9,1)
+num[2]=3
+print(num)	não vai mudar porque as tuplas são imutáveis
+
+num=[2,5,9,1]
+num[2]=3	a lista passa a ser 2,5,9,3
+num[4]=7	nao pode adicionar valores assim que da erro
+num.append(7)	ai adiciona
+num.sort()	coloca em ordem
+num.sort(reverse=True)		tudo em ordem reversa
+print(num)
+len(num)	quantidade de elementos
+num.insert(2,0)	na posição 2 adiciona o 0 e chega todo mundo pro lado kk
+num.pop()	eliminou o ultimo elemento
+num.pop(2)	elimina o elemento da posição 2
+num.pop(2,2)	elimina o elemento 2 da posição 2
+num.remove(2)	ele procura do inicio da lista só vai remover o primeiro 2
+se remover numero que nao tem ele da erro, tem q por um if
+
+if 4 in num:
+	num.remove(4)
+else:
+	print('Não achei o número 4')
+
+valores=list()	ou
+valores=[]
+valores.append(5)
+valores.append(9)
+valores.append(4)
+
+for v in valore:
+	print(f'{v}...',end='')
+for c,v in enumerate(valores):
+	print(f'Na posição {c} encontrei o valor {v}!')
+print('Cheguei ao final da lista.')
+
+for cont in range(0,5):
+	valores.append(int(input('Digite um valor: ')))
+
+a=[2,3,4,7]
+b=a
+b[2]=8		ele muda nas duas listas porque você criou uma ligação entre as listas
+print(f'Lista A: {a}')
+print(f'Lista B: {b}')
+
+b=a[:]		essa é a forma de copiar os itens da lista a na lista b sem criar uma conexão simultânea enttre elas

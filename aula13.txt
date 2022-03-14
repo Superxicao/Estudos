@@ -1,0 +1,36 @@
+for c in range(1,6): #escreveu 5 vezes, não considera o 6, o último número
+	print('oi')
+print('FIM')
+
+for c in range(0,6):
+	print('Oi')
+	print(c)# ele conta de 0 a 5. se o range for 1,7 ele vai contar de 1 a 7
+print('FIM') #agora ele fez 6 vezes
+
+for c in range (6,0,-1): #tem que ter o -1 no final pra ele contar pra traz
+	print(c)
+print('FIM')
+for c in range (0,7,2): #ele vai contar 0,2,4,6,FIM, o último faz ele contar de 2 em 2 pulando de 2 em 2
+	print(c)
+print('FIM')
+
+n=int(input('Digite um número: '))
+for c in range(0,n+1):
+	print(c)
+print('FIM')
+
+i=int(input('Início: '))
+f=int(input('Fim: '))
+p=int(input('Passo: '))
+for c in range(i,f+1,p)
+	print(c)
+print('FIM')
+
+for c in range (0,3):
+	n=int(input('Digite um valor: '))
+print('fim')
+
+for c in rage(0,4):
+	n=int(inpu('Digite um valor: '))
+	s+=n
+print('O somatório de todos os valores foi {}'.format(s))

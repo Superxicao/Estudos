@@ -1,0 +1,80 @@
+variáveis simples:
+lanche=hamburguer
+lanche=suco
+
+variáveis compostas: Tuplas
+() - Tuplas
+[] - Listas
+{} - Dicionários
+
+hamburguer, suco, pizza, pudim
+     0    ,  1  ,   2  ,  3
+    -4    , -3  ,  -2  , -1
+
+print(lanche[2]) pizza
+print(lanche[0:2])  hamburguer, suco #1 e 2, sem o 3 pq é a fronteira onde ele para
+print(lanche[1:]) suco, pizza e pudim #do elemento 1 até o elemento final
+print(lanche[-1]) pudim, e o hamburguer seria o -4, não é que nem o 0 no inverso.
+len(lanche) 4, quantidade de elementos dentro da tupla
+for c in lanche:
+	print(c) #pra cada comida ele imprime uma até acabar
+As tuplas são imutáveis
+
+lanche=('Hamburguer','Suco','Pizza','Pudim') # pode escrever sem parênteses tambem
+lanche='Hamburguer','Suco','Pizza','Pudim')
+print(lanche)		ele mostra a tupla
+print(lanche[1])	ele mostra o segundo elemento da tupla, no caso o suco
+print(lanche[3])	ele mostra o quarto elemento, que é o pudim
+print(lanche[-2])	ele mostra o elemento pizza, que é o elemento 2 (terceiro elemento) ou elemento -2
+print(lanche[1:3])	ele mostra o suco, pizza sem o ultimo elemento q é o limite aonde ele vai parar sem incluir, elementos 1 e 2 ele mostra
+print(lanche[2:])	ele mostra do elemento 2 (terceiro elemento) até o último, no caso pizza e pudim
+print(lanche[:2])	ele mostra do início até o elemento 2 (terceiro elemento) sem mostrar o terceiro elemento, que é o elemento 2, então ele mostra hamburguer e suco
+print(lanche[-2:)	ele mostra da pizza até fim, no caso, pizza e pudim, do -2 pra frente
+print(lanche[-3:)	ele mostra o suco pizza e pudim, do -3 q tb é o elemento 1 (segundo elemento) até o fim, mostrando suco, pizza e pudim
+
+lanche[1]='Refrigerante'
+print(lanche) #da erro porque tuplas não podem ser mudadas com programa rodando.
+1
+for comida in lanche:
+	print(f'Eu vou comer {comida}')
+print('Comi pra caramba!')
+
+lanche=('Hamburguer','Suco','Pizza','Pudim','Batata Frita')
+print(len(lanche))
+
+2
+for cont in range(0,len(lanche)):
+	print(cont) # 0 1 2 3 4 (5 elementos), mostra só os números
+	print(lanche[cont])
+	print(f'Eu vou comer {lanche[cont]}')
+	print(f'Eu vou comer {lanche[cont]} na posição {cont}')
+
+3
+for pos,comida in enumerate(lanche):
+	print(f'Eu vou comer {comida} na posição {pos}')
+
+print(lanche)
+print(sorted(lanche)) # ele apenas ordena paara exibição
+
+a=(2,5,4)
+b=(5,8,1,2)
+c=a+b		cria a tupla que começa com os elementos de a e termina com os de b
+c=b+a		cria a tupla que começa com os elementos de b e termina com os de a, contrário da decima porque somar tuplas a ordem importa
+print(c)
+print(len(c)		7 elementos
+print(c.count(5))	quantos elementos 5 tem ali, no caso 2
+print(c.count(4))	aparece 1 vez
+print(c.count(9))	0
+print(c)		(5,8,1,2,2,5,4)
+print(c.index(8))	1 (ta na posição 1)
+print(c.index(4))	6
+print(c.index(2))	posição 3, mas tem 2 ocorrencias, então tem que fazer assim
+print(c.index(2,4))	elemento,posição - no caso, elemento 2 a partir da posição 4. é tipo o .find()
+print(c.index(5))	posição 0, mas tem dois cincos, um na posição 5 inclusive
+print(c.index(5,1))	posição 5, porque agora começou a procurar o elemento 5 da posição 1, nao da 0
+			então ficou elemento, posição: elemento 5 a partir da posição 1 incluindo a 1
+no java as tuplas só aceitam elementos iguais dentro delas, no python vc pode ter e imprimir elementos de tipos diferentes na mesma lista
+pessoa=('Gustavo',39,'M',99.88)
+print(pessoa)
+del(pessoa)
+print(pessoa)		deletou a tupla inteira

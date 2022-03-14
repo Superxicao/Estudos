@@ -1,0 +1,19 @@
+n1=int(input('Digite um valor: '))
+n2=int(input('Digite outro: '))
+s=n1+n2
+print(type(n1))
+print('A soma vale ',s)
+print('A soma entre ', n1, 'e', n2, 'vale', s)
+print('A soma entre {} e {} vale {}'.format(n1,n2,s))
+
+n=float(input('Digite um valor: '))
+n2=str(input('Digite outro valor: '))
+n3=int(input('Digite outro valor: '))
+n4=bool(input('Digite outro valor: '))
+n5=input('Digite algum número: ')
+
+print(n)
+print(type(n), type(n2), type(n3))
+print(n5.isnumeric())
+print(n5.isalpha())
+print(n5.isalnum())

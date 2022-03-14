@@ -1,0 +1,36 @@
+cont=1
+while cont<=10: #while True: ele executa pra sempre para só com break
+	print(cont, '-> ', end='')
+	cont+=1
+print('Acabou')
+
+n=cont=0
+while n!=999
+	n=int(input('Digite um número: '))
+
+while cont<5:
+	n=int(input('Digite um número: '))
+	cont+=1
+
+n=s=0
+while !=999:
+	n=int(input('Digite um número: '))
+	s+=n
+print('A soma vale{}'.format(s)) #vai somar tudo com 999
+
+while True:
+	n=int(input('Digite um número: ')
+	if n==999:
+		break
+	s+=n
+print('A soma vale {}'.format(s))
+
+print(f'A soma vale {s}')
+
+nome='José'
+idade=33
+salario=987.3
+print(f'O {nome} tem {idade} anos.') #Python 3.6+
+print('O {} tem {} anos.'.format(nome,idade)) # Python 3
+print('O %s tem %d anos.'%(nome, idade)) #Python 2
+print(f'O {nome:20} tem {idade} anos e ganha R${salario:.2f}') #{nome:^20} ele centralizou em 20 caracteres {nome:-^20} centralizou com 20 espaços e pôs hífens de preenchimento {nome:->20} alinhado à direita ou esquerda

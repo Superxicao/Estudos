@@ -1,0 +1,13 @@
+#from math import sqrt,floor
+import math
+num=int(input('Digite um número: '))
+raiz=math.sqrt(num)
+print(' A raiz de {} ê {}'.format(num,math.floor(raiz),math.ceil(raiz)))
+
+import random
+num = random.random()
+print(num)
+print(random.randint(1,10))
+
+import emoji
+print(emoji.emojize("Olá Mundo! :sunglasses::earth_americas:",use_aliases=True))

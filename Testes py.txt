@@ -1,0 +1,14 @@
+str(print('{:.4f}'.format(100/3)))
+a=str(print(100/3))
+print(type(a))
+print(a)
+b=100/3
+str(print(b**2, (b**2)**(1/2)))
+print('')
+
+"""
+lista=['bola',['nome',[[12],[14]]]]
+print(lista)
+print(lista[0])
+print(lista[1][1][0])
+"""
