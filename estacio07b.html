@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eventos em Javascript</title>
+</head>
+
+<body onload="escondeTexto()">
+    <h1 id="titulo">Clique aqui para ver o texto escondido</h1>
+    <p id="textoEscondido">oi, eu sou o texto escondido</p>
+
+    <script type="text/javascript">
+   
+        function escondeTexto(){
+            var hp = document.getElementById("textoEscondido");
+            hp.style.display="none";
+        }
+
+        var hh = document.getElementById("titulo");
+        hh.onclick=function(){
+            var hh=document.getElementById("textoEscondido");
+            hh.style.display="block";
+        }
+
+    </script>
+
+</body>
+</html>
