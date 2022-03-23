@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <ctitle>Treino de botões</ctitle>
+</head>
+<body onload="escondeTexto()">
+    <h1 id="tituloPrincipal">Clique Aqui Otário</h1>
+    <p id="texto1">primeiro</p>
+    <p id="texto2">segundo</p>
+    <p id="texto3">terceiro</p>
+    <p id="texto4">quarto</p>
+    
+    <script type="text/javascript">
+        function escondeTexto(){
+            var texto=document.getElementById("texto1");
+            texto.style.display="none";
+        }
+        var titulo=document.getElementById("tituloPrincipal");
+        titulo.onclick=function(){
+            texto=document.getElementById("texto1");
+            texto.style.display="block"
+        }
+        var esconde=document.getElementById("texto1");
+        esconde.onclick=function(){
+            texto=document.getElementById("texto1");
+            texto.style.display="none"
+        }
+
+    </script>
+</body>
+
+</html>
